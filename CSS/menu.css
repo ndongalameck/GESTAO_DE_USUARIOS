@@ -1,0 +1,44 @@
+
+
+body{
+	text-align: center;
+}
+		
+table{
+	margin-top: 1cm;
+	width: 100%;
+	/*adicinando espaços nas bordas*/
+	background-color: #999;
+}
+th{
+	background-color:;
+}
+
+td{
+	padding: 15px;
+	text-align: center;
+	background-color: #d9d9d9;
+	border-collapse: collapse;
+}
+td a{
+	text-decoration: none;
+	color: ;
+}
+td a:hover{
+	background-color: 
+}
+/*
+#tabela{
+	background: #f1f1c1;
+}		
+
+table, td, th{
+	text-align: center;
+	border: 1px solid #000;
+	/*adicioonando somente uma linha de borda
+	border-collapse: collapse;
+}
+td{
+	padding: 15px;
+}
+*/	
