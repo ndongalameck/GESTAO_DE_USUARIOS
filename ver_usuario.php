@@ -1,9 +1,39 @@
-<?php
-	//ligar a base de dados
-	$ligacao = mysql_connect('localhost', 'root' '') or die('erro ao ligar a base de dados');
-	//ativar a base de dados
-	mysql_select_db('gestao_usuarios' $ligacao) or die (mysql_error($ligacao));
-	//criar a consulta a base de dados
-	$slq = "SELECT * FROM usuarios ORDER BY nome_usuario ASC";
-	
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ver usuários</title>
+	<link rel="stylesheet" href="CSS/ver_usuario.css">
+</head>
+<body>
+	<?php
+		//ligar a base de dados
+		$ligacao = mysql_connect('localhost', 'root', '123root') or die('erro ao ligar a base de dados');
+		//ativar a base de dados
+		mysql_select_db('gestao_usuarios', $ligacao) or die (mysql_error($ligacao));
+		//criar a consulta a base de dados
+		$slq = "SELECT * FROM usuarios ORDER BY id_usuario ASC";
+		//criar a variavel consulta que vai guardar os resultados obtidos ordenados por nome de forma ascedente
+		$consulta = mysql_query($slq);
+			//verificar se existem dados e mostrá-los
+			if($consulta){
+			include ('menu.php');
+			echo ("<table>"); 
+				echo ("<tr> <th>Nº de cadastro</th> <th>nome do usuario</th> <th>E-mail do usuario</th> </tr>");
+				//percorrer o array
+				$mostrar="";
+				while($mostrar = mysql_fetch_array($consulta)){
+					$id_usuario = $mostrar["id_usuario"];
+					$nome_usuario = $mostrar["nome_usuario"];
+					$email = $mostrar["email"];
+				//caso haja registos mostre-nos na tabela
+				echo ("<tr> <td>$id_usuario</td> <td>$nome_usuario</td> <td>$email</td> </tr>");
+				} echo ("</table>");
+			} //caso n haja registro informa ao usuario 
+			else{
+				echo "A base de dados n contêm registos";
+			} 	
+			//libertar a variavel da memoria
+			mysql_free_result($consulta);
+		?>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>REGISTAR USÁRIOS</title>
+	<title>cadastro de usuários</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="CSS/registar_usuario.css">
 	<script></script>
