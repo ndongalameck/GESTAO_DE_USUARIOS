@@ -4,10 +4,7 @@
 		header("Location: login.php");
 			exit;
 	}
-	//ligar a base de dados
-	$ligacao = mysql_connect('localhost', 'root', '123root') or die('não foi possivel ligar a base de dados');
-	// selecioanar a base de dados pretendida
-	mysql_select_db('gestao_usuarios', $ligacao) or die(mysql_error($ligacao));
+	include('conexao.php');
 	//definir as variveis username e password
 	$username = $_POST['name'];
 	$password = $_POST['password'];

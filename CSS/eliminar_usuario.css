@@ -1,14 +1,15 @@
 table{
 	width: 100%;
+	margin-top: 100px;
+	border: 1px solid #000;
 }
 
 table, td, th{
-	border-radius: 10px;
 	text-align: center;
-	border: 1px solid #000;
-	/*adicioonando somente uma linha de borda*/
-	
 }		
 td{
 	padding: 15px;
+	border: 1px solid #000;
 }
+
+

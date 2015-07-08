@@ -7,9 +7,10 @@
 	<script></script>
 </head>
 <body>
-	<h1>SISTEMA DE GESTÃO DE USUÁRIOS</h1>
-	<div id="big_wrapper">
-		<h1>LOGIN</h1>
+	<hgroup>
+		<h1>SISTEMA DE GESTÃO DE USUÁRIOS</h1>
+		<h3>LOGIN</h3>
+	</hgroup>	
 		<form name="myForm" action="processar_login.php" method="POST" id="contact_form" class="rounded">
 			<div class="field">
 				<label for="name">Name:</label>
@@ -24,6 +25,6 @@
 			<input type="submit" name="submit" class="button" value="entrar">
 			<input type="reset" name="delete" class="button"value="apagar">
 		</form>
-	</div>
+
 </body>
 </html>

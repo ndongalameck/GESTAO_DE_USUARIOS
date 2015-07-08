@@ -5,11 +5,16 @@ pegando todos os elementos
     font-family: sans-serif;
     -moz-box-sizing: box-border;
 }
+h1{
+    font: 30px sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
 /*-------------------------------------------------------------------
 pegando todos os elementos
 ---------------------------------------------------------------------*/
 #contactform { 
-    margin-top: 2cm;
+    margin: 100px auto;
     width: 500px;
     height: 250px;
     padding: 20px;

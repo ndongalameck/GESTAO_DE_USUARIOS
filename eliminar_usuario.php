@@ -7,10 +7,7 @@
 </head>
 <body>
 	<?php
-		//ligar a base de dados
-		$ligacao = mysql_connect('localhost', 'root', '123root') or die ("não foi possivel ligar à base de dados");
-		//ativar a base de dados
-		mysql_select_db('gestao_usuarios', $ligacao) or die (mysql_error($ligacao));
+		include('conexao.php');
 		//criar a consulta a base dados
 		$sql = "SELECT * FROM usuarios ORDER BY id_usuario ASC";
 		//executar a consulta e guardar dados numa variavel 
@@ -21,13 +18,13 @@
 			echo ("<table>"); 
 				echo ("<tr> <th>Nº de cadastro</th> <th>nome do usuario</th> <th>E-mail do usuario</th> </tr>");
 				//percorrer o array
-				$mostrar="";
 				while($mostrar = mysql_fetch_array($consulta)){
 					$id_usuario = $mostrar["id_usuario"];
 					$nome_usuario = $mostrar["nome_usuario"];
 					$email = $mostrar["email"];
 					//apresentar o link para cada registo
-					echo ("<tr><td> <a href=\"processar_eliminar.php?id_usuario=$id_usuario&nome_usuario=$nome_usuario&email=$email\">$id_usuario</a></td> <td>$nome_usuario</td> <td>$email</td> </tr>");
+					echo ("<tr><td> <a href=\"processar_eliminar.php?id_usuario=$id_usuario&nome_usuario=$nome_usuario&email=$email\">$id_usuario</a></td><td>$nome_usuario</td><td>$email</td>");
+
 			echo ("</table>");
 				}
 				}//caso n existem registos, informam ao utilizador
