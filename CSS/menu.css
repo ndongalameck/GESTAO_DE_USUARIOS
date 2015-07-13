@@ -1,3 +1,8 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
 body{
 	
 	background-color: #ddd;
@@ -14,12 +19,12 @@ h1{
 	opacity: 0.8;
 	margin-top: 30px;
 }
-li{
+#top_menu li{
 	display: inline-block;
 	margin-top: 15px;
 	padding-left: 30px;
 }
-a{
+#top_menu li a{
 	font-family: sans-serif;
 	text-decoration: none;
 	-moz-transition: 0.5s;
@@ -27,12 +32,21 @@ a{
 	transition: 0.5s;
 	color: #9dd;
 }
-a:hover{
+#top_menu a:hover{
 	text-decoration: none;
 	color: #fff;
 	-moz-transition: 0.5s;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
+}
+
+a{
+	color: red;
+	text-decoration: none;
+}
+
+.hero{
+	margin-top: 200px;
 }
 
 
