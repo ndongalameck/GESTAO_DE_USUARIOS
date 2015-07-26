@@ -1,11 +1,11 @@
 <?php
 	//varificar se houve preenchimento dos campos das variaveis
-	if( !empty($_POST) AND (empty($_POST['name']) OR empty($_POST['password']))) {
+	if((empty($_POST['name']) OR empty($_POST['password']))) {
 		header("Location: login.php");
 			exit;
 	}
 	include('conexao.php');
-	//definir as variveis username e password
+	//definir as variveis username e password aos campos do form
 	$username = $_POST['name'];
 	$password = $_POST['password'];
 	//consultar a base de dados
@@ -16,8 +16,9 @@
 		header("Location: menu.php");
 			exit;
 	}else{
-		header("Location: login.php");
-			exit;
+		echo "<div>infelizmente n existe este usuario na nossa base de dados</div>";
+		//header("Location: login.php");
+		//exit;
 	}
 	mysql_free_result($consulta);
 ?>

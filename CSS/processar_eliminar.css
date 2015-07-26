@@ -1,0 +1,18 @@
+table{
+	width: 100%;
+	margin-top: 100px;
+	border: 1px solid #000;
+}
+
+table, td, th{
+	text-align: center;
+}		
+td{
+	padding: 15px;
+	border: 1px solid #000;
+	background: #99cc33;
+}
+
+
+
+		

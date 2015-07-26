@@ -3,7 +3,7 @@ body{
 	background-color: #ddd;
 }
 hgroup{
-	margin-top: 6.25%; /* 100/16 = 6.25% */
+	margin-top: 6.25%;
 }
 h1, h3{
 	font: 30px "times new roman";

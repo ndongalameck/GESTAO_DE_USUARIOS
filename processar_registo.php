@@ -25,14 +25,14 @@
 		include('menu.php'); 
 	?>
 	<div id="box_message">
-		<script type="text/javascript">
+		<!--<script type="text/javascript">
 			alert("cadastro efectuado com sucesso!!!");
 			window.Location="registar_usuario.php";
-		</script>
-		<!--<?php
-			// mensagem de confirmação de gravação de erros
+		</script> -->
+		<?php
+			// mensagem de confirmação de gravação de dados
 			echo "<h2>O cadastro foi efectuado com sucesso</h2>";
-		?> -->
+		?> 
 	</div>
 </body>
 </html>
